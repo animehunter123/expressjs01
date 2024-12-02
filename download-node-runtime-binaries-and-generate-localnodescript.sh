@@ -32,7 +32,7 @@ node_binary=$(pwd)/node
 npm_binary=$(pwd)/npm
 
 # Generate start-webapp-localnode.sh
-cat > ./start-webapp-localnode.sh << 'EOL'
+cat > ../../../start-webapp-localnode.sh << 'EOL'
 #!/usr/bin/env bash
 
 # Get the directory where the script is located
@@ -50,7 +50,7 @@ node server.js
 EOL
 
 # Make the generated script executable
-chmod +x ./start-webapp-localnode.sh
+chmod +x ../../../start-webapp-localnode.sh
 
 echo "Generated start-webapp-localnode.sh successfully!"
 
