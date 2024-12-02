@@ -8,7 +8,9 @@ Frontend is public/index.html (and also public/app.js)!
 
 Data is stored in data.json, basically as soon as you click you will get data into the file
 
-**<html><font color="red">The main goal of this app is to be a portable Node.js CRUD application with JSON storage, thus run it anywhere WITHOUT DOCKER relying on the NodeJS runtime... pretty cool!!!</font></html>**
+```diff
+! The main goal of this app is to be a portable Node.js CRUD application with JSON storage, thus run it anywhere WITHOUT DOCKER relying on the NodeJS runtime... pretty cool!!!
+```
 
 **Usage:**
 
