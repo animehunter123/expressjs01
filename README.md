@@ -15,7 +15,12 @@ Data is stored in data.json, basically as soon as you click you will get data in
 ```
 
 **Usage:**
+The easier way to portabilize AND run it is with the bash scripts:
+1. `./download-nodeRE+nodeMods-and-generate-localnodescript.sh`
+2. `./start-webapp-localnode.sh` #This is a selfgenerated script!!!
 
+
+The old way to run this app was:
 1. Run `npm install` to install dependencies
 2. Run `node server.js` to start the server
 3. Open `http://localhost:3000` in your browser
