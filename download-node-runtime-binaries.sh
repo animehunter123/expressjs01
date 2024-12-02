@@ -16,6 +16,7 @@ else
     tar xvf node-v22.11.0-linux-x64.tar.gz
 fi
 
+cd node*
 cd bin
 
 node_binary=$(pwd)/node
