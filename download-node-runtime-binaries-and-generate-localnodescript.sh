@@ -33,7 +33,7 @@ npm_binary=$(pwd)/npm
 
 # install the node_modules
 cd ../../../
-$node_binary install --save
+node install --save
 cd -
 
 # Generate start-webapp-localnode.sh
