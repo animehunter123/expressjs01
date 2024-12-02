@@ -34,4 +34,6 @@ cd ..
 
 $npm_binary install --save
 $npm_binary start
+$npm_binary run
+$npm_binary run --prefix=..
 
