@@ -31,6 +31,11 @@ export PATH="$NODE_HOME/bin:$PATH"
 node_binary=$(pwd)/node
 npm_binary=$(pwd)/npm
 
+# install the node_modules
+cd ../../
+$node_binary install --save
+cd -
+
 # Generate start-webapp-localnode.sh
 cat > ../../../start-webapp-localnode.sh << 'EOL'
 #!/usr/bin/env bash
