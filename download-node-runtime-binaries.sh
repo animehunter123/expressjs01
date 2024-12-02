@@ -26,6 +26,7 @@ cd bin
 export NODE_HOME="$(pwd)/.."
 export NPM_CONFIG_PREFIX="$(pwd)/../.npm-global"
 export NODE_PATH="$NODE_HOME/lib/node_modules"
+export PATH="$NODE_HOME/bin:$(PATH)"
 
 node_binary=$(pwd)/node
 npm_binary=$(pwd)/npm
