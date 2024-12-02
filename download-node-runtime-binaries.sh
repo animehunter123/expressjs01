@@ -4,6 +4,7 @@
 
 # mkdir a directory for the binaries with todays date in a variable
 target_dir="node-v22.11.0-$(date +%Y-%m-%d)"
+rm -rf "$target_dir"
 mkdir -p "$target_dir"
 cd "$target_dir"
 
