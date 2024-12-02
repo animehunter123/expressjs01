@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const category = document.getElementById('categoryInput').value;
 
         try {
-            const response = await fetch('http://localhost:3000/api/items', {
+            const response = await fetch('/api/items', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const category = document.getElementById('editCategory').value;
 
         try {
-            const response = await fetch(`http://localhost:3000/api/items/${id}`, {
+            const response = await fetch(`/api/items/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Load items from server
 async function loadItems() {
     try {
-        const response = await fetch('http://localhost:3000/api/items');
+        const response = await fetch('/api/items');
         const items = await response.json();
         displayItems(items);
     } catch (error) {
@@ -99,7 +99,7 @@ function editItem(id, name, category) {
 async function deleteItem(id) {
     if (confirm('Are you sure you want to delete this item?')) {
         try {
-            const response = await fetch(`http://localhost:3000/api/items/${id}`, {
+            const response = await fetch(`/api/items/${id}`, {
                 method: 'DELETE',
             });
 
