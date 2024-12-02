@@ -22,4 +22,4 @@ Data is stored in data.json, basically as soon as you click you will get data in
 
 # TODO
 
-* Lol, CORS error still happening on express js oops... i forgot
+* NONE!
