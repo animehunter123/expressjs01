@@ -32,7 +32,7 @@ node_binary=$(pwd)/node
 npm_binary=$(pwd)/npm
 
 # install the node_modules
-cd ../../
+cd ../../../
 $node_binary install --save
 cd -
 
