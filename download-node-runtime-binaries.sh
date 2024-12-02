@@ -25,7 +25,8 @@ cd bin
 node_binary=$(pwd)/node
 npm_binary=$(pwd)/npm
 
-cd ../..
+cd ..
 
+$npm_binary install --save
 $npm_binary start
 
