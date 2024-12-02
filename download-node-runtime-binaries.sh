@@ -11,9 +11,11 @@ cd "$target_dir"
 if [ "$(uname -m)" == "arm64" ]; then
     curl -L https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-arm64.tar.xz -o node-v22.11.0-linux-arm64.tar.xz
     tar xvfJ node-v22.11.0-linux-arm64.tar.xz -C .
+    cd node-v22.11.0-linux-arm64
 else
     curl -L https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-x64.tar.gz -o node-v22.11.0-linux-x64.tar.gz
     tar xvf node-v22.11.0-linux-x64.tar.gz -C .
+    cd node-v22.11.0-linux-x64
 fi
 
 # cd node*
