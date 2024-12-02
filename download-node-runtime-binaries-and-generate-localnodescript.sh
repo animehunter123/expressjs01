@@ -31,10 +31,31 @@ export PATH="$NODE_HOME/bin:$PATH"
 node_binary=$(pwd)/node
 npm_binary=$(pwd)/npm
 
-cd ..
+# Generate start-webapp-localnode.sh
+cat > ../../start-webapp-localnode.sh << 'EOL'
+#!/usr/bin/env bash
 
-$npm_binary install --save
-$npm_binary start
-$npm_binary run
-$npm_binary run --prefix=..
+# Get the directory where the script is located
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+# Set up Node.js environment variables
+export NODE_HOME="$SCRIPT_DIR/node-v22.11.0-$(date +%Y-%m-%d)/node-v22.11.0-linux-$(uname -m | grep -q "aarch64" && echo "arm64" || echo "x64")"
+export NPM_CONFIG_PREFIX="$NODE_HOME/.npm-global"
+export NODE_PATH="$NODE_HOME/lib/node_modules"
+export PATH="$NODE_HOME/bin:$PATH"
+
+# Start the web application
+cd "$SCRIPT_DIR"
+node server.js
+EOL
+
+# Make the generated script executable
+chmod +x ../../start-webapp-localnode.sh
+
+echo "Generated start-webapp-localnode.sh successfully!"
+
+# cd ..
+# $npm_binary install --save
+# $npm_binary start
+# $npm_binary run
+# $npm_binary run --prefix=..
